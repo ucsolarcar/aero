@@ -19,19 +19,25 @@ convertToMeters 1;
 
 vertices
 (
-    (-5 0 -5)
-    (15 0 -5)
-    (15 7 -5)
-    (-5 7 -5)
-    (-5 0 7)
-    (15 0 7)
-    (15 7 7)
-    (-5 7 7)
+    (-2 0 -3)	//0
+    (10 0 -3)	//1
+    (10 4 -3)	//2
+    (-2 4 -3)	//3
+    (-2 0  5)	//4
+    (10 0  5)	//5
+    (10 4  5)	//6
+    (-2 4  5)	//7
+    ( 0 0 -3)	//8
+    ( 0 4 -3)	//9
+    ( 0 4  5)	//10
+    ( 0 0  5)	//11
 );
 
 blocks
 (
-    hex (0 1 2 3 4 5 6 7) (20 7 12) simpleGrading (1 1 1)
+//      hex (0 1 2 3 4 5 6 7) (40 14 24) simpleGrading (1 1 1)
+    hex (0 8 9 3 4 11 10 7) (20  40 80) simpleGrading (0.25 1 1)
+    hex (8 1 2 9 11 5 6 10) (100 40 80) simpleGrading (4 1 1)
 );
 
 edges
@@ -40,13 +46,15 @@ edges
 
 boundary
 (
-    frontAndBack
+   sides
     {
         type patch;
         faces
         (
-            (3 7 6 2)
-            (1 5 4 0)
+            (4 11 10 7)
+	    (11 5 6 10)
+            (0 3 9 8)
+	    (8 9 2 1)
         );
     }
     inlet
@@ -65,20 +73,22 @@ boundary
             (2 6 5 1)
         );
     }
-    lowerWall
-    {
-        type wall;
-        faces
-        (
-            (0 3 2 1)
-        );
-    }
-    upperWall
+    top
     {
         type patch;
         faces
         (
-            (4 5 6 7)
+            (3 7 10 9)
+	    (9 10 6 2)
+        );
+    }
+    ground
+    {
+        type patch;
+        faces
+        (
+            (0 8 11 4)
+	    (11 8 1 5)
         );
     }
 );

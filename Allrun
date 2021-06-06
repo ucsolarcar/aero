@@ -1,0 +1,5 @@
+runApplication blockMesh
+runApplication surfaceFeatures
+runApplication snappyHexMesh -overwrite
+runApplication simpleFoam > log.simpleFoam &
+runApplication paraFoam

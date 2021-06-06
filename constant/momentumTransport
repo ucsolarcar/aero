@@ -20,7 +20,7 @@ RAS
 {
     model               kOmegaSST;
 
-    turbulence          off;
+    turbulence          on;
 
     printCoeffs         on;
 }
