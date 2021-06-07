@@ -35,7 +35,21 @@ boundaryField
         value           $internalField;
     }
 
-    lowerWall
+    sides
+    {
+        type            inletOutlet;
+        inletValue      $internalField;
+        value           $internalField;
+    }
+
+    top
+    {
+        type            inletOutlet;
+        inletValue      $internalField;
+        value           $internalField;
+    }
+
+    ground
     {
         type            kqRWallFunction;
         value           $internalField;
@@ -47,7 +61,7 @@ boundaryField
         value           $internalField;
     }
 
-    #include "include/frontBackUpperPatches"
+//    #include "include/frontBackUpperPatches"
 }
 
 

@@ -35,18 +35,32 @@ boundaryField
         value           $internalField;
     }
 
-    lowerWall
-    {
-        type            fixedValue;
+    sides
+     {
+        type            inletOutlet;
+        inletValue      uniform (0 0 0);
         value           $internalField;
     }
+
+    top
+    {
+        type            inletOutlet;
+        inletValue      uniform (0 0 0);
+        value           $internalField;
+    }
+
+    ground
+    {
+        type            noSlip;
+    }
+
 
     carGroup
     {
         type            noSlip;
     }
 
-    #include "include/frontBackUpperPatches"
+//    #include "include/frontBackUpperPatches"
 }
 
 

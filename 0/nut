@@ -24,7 +24,7 @@ boundaryField
     //- Set patchGroups for constraint patches
     #includeEtc "caseDicts/setConstraintTypes"
 
-    frontAndBack
+    sides
     {
         type            calculated;
         value           uniform 0;
@@ -42,13 +42,13 @@ boundaryField
         value           uniform 0;
     }
 
-    lowerWall
+    ground
     {
         type            nutkWallFunction;
         value           uniform 0;
     }
 
-    upperWall
+    top
     {
         type            calculated;
         value           uniform 0;

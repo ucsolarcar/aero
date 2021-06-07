@@ -225,7 +225,7 @@ addLayersControls
     }
 
     // Expansion factor for layer mesh
-    expansionRatio 1.1;
+    expansionRatio 1.0;
 
     // Wanted thickness of final added cell layer. If multiple layers
     // is the thickness of the layer furthest away from the wall.
@@ -236,7 +236,7 @@ addLayersControls
     // Minimum thickness of cell layer. If for any reason layer
     // cannot be above minThickness do not add layer.
     // Relative to undistorted size of cell outside layer.
-    minThickness 0.000015;
+    minThickness 0.001;
 
     // If points get not extruded do nGrow layers of connected faces that are
     // also not grown. This helps convergence of the layer addition process

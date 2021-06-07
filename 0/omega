@@ -34,7 +34,21 @@ boundaryField
         value           $internalField;
     }
 
-    lowerWall
+    top
+    {
+        type            inletOutlet;
+        inletValue      $internalField;
+        value           $internalField;
+    }
+
+    sides
+    {
+        type            inletOutlet;
+        inletValue      $internalField;
+        value           $internalField;
+    }
+
+    ground
     {
         type            omegaWallFunction;
         value           $internalField;
@@ -46,7 +60,7 @@ boundaryField
         value           $internalField;
     }
 
-    #include "include/frontBackUpperPatches"
+//    #include "include/frontBackUpperPatches"
 }
 
 

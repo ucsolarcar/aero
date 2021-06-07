@@ -36,7 +36,19 @@ boundaryField
         value           $internalField;
     }
 
-    lowerWall
+    sides
+    {
+        type            fixedValue;
+        value           $internalField;
+    }
+
+    top
+    {
+        type            fixedValue;
+        value           $internalField;
+    }
+
+    ground
     {
         type            zeroGradient;
     }
