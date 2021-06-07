@@ -36,8 +36,8 @@ vertices
 blocks
 (
 //      hex (0 1 2 3 4 5 6 7) (40 14 24) simpleGrading (1 1 1)
-    hex (0 8 9 3 4 11 10 7) (20  40 80) simpleGrading (0.25 1 1)
-    hex (8 1 2 9 11 5 6 10) (100 40 80) simpleGrading (4 1 1)
+    hex (0 8 9 3 4 11 10 7) (4  8 16) simpleGrading (0.25 1 1)
+    hex (8 1 2 9 11 5 6 10) (20 8 16) simpleGrading (4 1 1)
 );
 
 edges
@@ -84,7 +84,7 @@ boundary
     }
     ground
     {
-        type patch;
+        type wall;
         faces
         (
             (0 8 11 4)
