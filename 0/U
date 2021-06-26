@@ -30,23 +30,17 @@ boundaryField
 
     outlet
     {
-        type            inletOutlet;
-        inletValue      uniform (0 0 0);
-        value           $internalField;
+        type            zeroGradient;
     }
 
     sides
      {
-        type            inletOutlet;
-        inletValue      uniform (0 0 0);
-        value           $internalField;
+        type            zeroGradient;
     }
 
     top
     {
-        type            inletOutlet;
-        inletValue      uniform (0 0 0);
-        value           $internalField;
+        type            zeroGradient;
     }
 
     ground
